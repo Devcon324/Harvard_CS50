@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // TODO: Add code to check answers to questions
+            // listen for events after page is fully loaded
+           document.addEventListener('DOMContentLoaded', function() {
+
+                // when correct answer is clicked, change color to green
+                // create a "correct" object based on the answer/button class = correct
+                let correct = document.querySelector('.correct');
+
+                // on the 'click' event, do the function
+                correct.addEventListener('click', function() {
+                    // change background & text color of object
+                    correct.style.backgroundColor = 'green';
+                    correct.style.color = 'white';
+                    // scan the HTML for 'feedback1' <p>, and add 'Correct!'
+                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+                // when any incorrect answer is clicked, change color to red
+                // create a list of incorrect answer objects
+                let incorrects = document.querySelectorAll('.incorrect');
+
+                // loop through each incorrect answer
+                for (let i = 0; i < incorrects.length; i++) {
+
+                    // on the 'click' event, do the function
+                    incorrects[i].addEventListener('click', function() {
+                        // change background & text color of object
+                        incorrects[i].style.backgroundColor = 'red';
+                        incorrects[i].style.color = 'white';
+                        // scan the HTML for 'feedback1' <p>, and add 'Correct!'
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                // scan HTML for 'check' and listen for click, perform function
+                document.querySelector('#check').addEventListener('click', function() {
+                    // declare input object based on user input int extbox
+                    let input = document.querySelector('input');
+
+                    // if the vlaue of the input is the answer
+                    if (input.value === 'Ottawa') {
+                        input.style.backgroundColor = 'green';
+                        input.style.color = 'white';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    }
+                    // if the vlaue of the input is NOT the answer
+                    else {
+                        input.style.backgroundColor = 'red';
+                        input.style.color = 'white';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect!';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital city of England?</h3>
+
+                <button class="correct">London</button>
+                <button class="incorrect">Oxford</button>
+                <button class="incorrect">York</button>
+
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the capital city of Canada?</h3>
+
+                <input type='text'></input>
+                <button id='check'>Check Answer</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>
