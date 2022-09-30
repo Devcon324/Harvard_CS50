@@ -13,14 +13,14 @@ https://cs50.harvard.edu/x/2022/
 
 # Lectures
 
-Week 0 - Scratch
-Week 1 - C
-Week 2 - Arrays
-Week 3 - Algorithms
-Week 4 - Memory
-Week 5 - Data Structures
-Week 6 - Python
-Week 7 - SQL
-Week 8 - HTML, CSS, JavaScript1
-Week 9 - Flask
-Week 10 - Emoji
+Week 0 - Scratch</b>
+Week 1 - C</b>
+Week 2 - Arrays</b>
+Week 3 - Algorithms</b>
+Week 4 - Memory</b>
+Week 5 - Data Structures</b>
+Week 6 - Python</b>
+Week 7 - SQL</b>
+Week 8 - HTML, CSS, JavaScript1</b>
+Week 9 - Flask</b>
+Week 10 - Emoji</b>
